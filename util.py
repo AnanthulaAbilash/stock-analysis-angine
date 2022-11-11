@@ -11,6 +11,7 @@ import os
 from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
 import matplotlib
 """ matplotlib.use('TKAgg') """
+""" matplotlib.use('Agg') """
 import matplotlib.dates as mdates
 import plotly.graph_objects as go
 """ import cufflinks as cf """
@@ -466,6 +467,7 @@ def getStock_acf_pacf_plots(stockInputInf = {}, price_data=False):
     plt.xticks(list(range(0,26,2)))
     ax1.set_xlabel("ACF Lag (in days)", fontdict=form1)
     ax1.set_ylabel("Correlation Ratio", fontdict=form1)
+    ax1.set_ylim([-0.125, 0.125])
     ax1.set_title(r"'%s' Auto Correlation"%ticker_symbolN, fontdict=form2, alpha=1, loc='center')
     
     plot_pacf(priceData_diff, ax=ax2, lags=25, alpha=.1, zero=False)
@@ -473,6 +475,7 @@ def getStock_acf_pacf_plots(stockInputInf = {}, price_data=False):
     """  plot_pacf(priceData_diff, ax=ax2, lags=25, alpha=.05, title=r"'%s' Partial Auto Correlation (PACF) Plot for " %ticker_symbol) """
         
     ax2.set_xlabel("PACF Lag (in days)", fontdict=form1)
+    ax2.set_ylim([-0.125, 0.125])
     #ax2.set_ylabel("(PACF) Correlation Ratio", fontdict=form1)
     ax2.set_title(r"'%s' Partial Auto Correlation" %ticker_symbolN, fontdict=form2, alpha=1, loc='center') 
     
