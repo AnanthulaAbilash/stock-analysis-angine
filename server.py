@@ -176,5 +176,5 @@ if __name__ == '__main__':
     """ db.create_all() """
     util.load_artifacts()
     """ app.run(port=5000) """
-    serve(app)
+    serve(app, port=5000)
     """ serve(app, port=5000, host="127.0.0.1") """
