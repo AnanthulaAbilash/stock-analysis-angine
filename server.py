@@ -5,6 +5,7 @@ from flask_cors import CORS, cross_origin
 """ from flask_sqlalchemy import SQLAlchemy
 from base64 import b64encode """
 from waitress import serve
+import os
 
 
 app = Flask(__name__)
@@ -170,11 +171,12 @@ def display_stock_help():
     
     return response
 
+PORT = os.environ.get('PORT', 5000)
 
 if __name__ == '__main__':
     print('Server ready..')
     """ db.create_all() """
     util.load_artifacts()
     """ app.run(port=5000) """
-    serve(app, port=5000)
+    serve(app, port=PORT)
     """ serve(app, port=5000, host="127.0.0.1") """
