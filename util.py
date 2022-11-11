@@ -10,7 +10,7 @@ import json
 import os
 from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
 import matplotlib
-matplotlib.use('TKAgg')
+""" matplotlib.use('TKAgg') """
 import matplotlib.dates as mdates
 import plotly.graph_objects as go
 """ import cufflinks as cf """
