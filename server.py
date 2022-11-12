@@ -10,7 +10,8 @@ import os
 
 app = Flask(__name__)
 app.secret_key = 'ShivaShakti'
-cors = CORS(app, resources={r'/*':{'origins':'*'}})
+cors = CORS(app, resources={r'/*':{'origins':['https://stock-analysis-app-aa.herokuapp.com/']}})
+""" cors = CORS(app, resources={r'/*':{'origins':['http://localhost:3000']}}) """
 app.config['CORS_HEADERS'] = 'Content-Type'
 """ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///stockImages.sqlite3'
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False """

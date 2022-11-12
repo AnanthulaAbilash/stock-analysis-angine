@@ -274,7 +274,7 @@ def plot_stock_Plotlydisplay(tickerDF_plotly, ticker_symbolN):
     
     """ 'displaylogo':False, """
     
-    config = dict({'displaylogo':False, 'scrollZoom': True,'displayModeBar': True,
+    config = dict({'displaylogo':False, 'scrollZoom': False,'displayModeBar': True,
                    'modeBarButtonsToAdd':['drawopenpath',
                                         'eraseshape'
                                        ],
@@ -401,7 +401,8 @@ def plot_stock_Plotlydisplay(tickerDF_plotly, ticker_symbolN):
     fig.update_xaxes(range = [x_data[0]-0.02*dx_xaxes, x_data[-1]+0.02*dx_xaxes])
     
     fig.update_layout(    
-    newshape_line_color='cyan',   
+    newshape_line_color='cyan',
+    dragmode = None   
     )
     """ dragmode='drawopenpath', """
 
