@@ -363,7 +363,7 @@ def plot_stock_Plotlydisplay(tickerDF_plotly, ticker_symbolN):
     # Source
     annotations.append(dict(xref='paper', yref='paper', x=0.95, y=-0.125,
                               xanchor='center', yanchor='top',
-                              text='Date Source: Yahoo Finance API',
+                              text='Data Source: Yahoo Finance API',
                               font=dict(family='Arial',
                                         size=10,
                                         color='rgb(150,150,150)'),
